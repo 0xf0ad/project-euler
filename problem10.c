@@ -21,7 +21,7 @@ bool isPrime(uint32_t n){
 
 int main(void){
         uint32_t number = 2000000;
-		uint64_t sum = 2;
+	uint64_t sum = 2;
 
         for(uint32_t i = 3; i < number; i += 2)
                 if(isPrime(i))

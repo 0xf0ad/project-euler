@@ -8,7 +8,7 @@ int main(void){
 	int64_t a, b, c;
 	const uint32_t sum = 1000;
 	bool found = false;
-	
+
 	for(a = 1; !(a == sum || found); a++){
 		uint64_t a_squared = a*a;
 		for(b = 1; b != sum - a; b++){

@@ -28,7 +28,7 @@ void get_max_prod(const char* number, uint16_t begin, uint16_t step, uint8_t num
 
 	for(uint32_t j = begin * 2; j != (numbers_online * step + begin) * 2; j += (step) * 2)
 		prod *= (number[j] - '0') * 10 + (number[j+1] - '0');
-	
+
 	if(*prev_max < prod)
 		*prev_max = prod;
 }
@@ -66,4 +66,3 @@ int main(void){
 
 	return EXIT_SUCCESS;
 }
-

@@ -34,10 +34,10 @@ int main(void){
 
 	for(uint16_t i = 0; i != numdigits - adjnumdigits + 1; i++, prod = 1){
 		adjnum = number + i;
-		
+
 		for(uint16_t j = 0; j != adjnumdigits; j++)
 			prod *= adjnum[j] - '0';
-		
+
 		if(prod > maxprod){
 			maxprod = prod;
 			maxindex = i;
