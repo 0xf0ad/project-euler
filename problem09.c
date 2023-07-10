@@ -19,10 +19,10 @@ int main(void){
 			}
 		}
 	}
+
 	// a is incremented befaure exiting the loop so we sould decrement it to obtain its original state
 	a--;
 
 	printf("a = %ld\tb = %ld\tc = %ld\ntheir product : %ld\n", a, b, c, a * b * c);
 	return EXIT_SUCCESS;
 }
-

@@ -11,7 +11,7 @@ bool isPrime(uint32_t n){
 		return false;
 
 	uint32_t sealling = sqrt(n);
-			
+
 	for(uint32_t i = 5; i <= sealling; i += 6)
 		if(!( n % (i) && n % (i+2) ))
 			return false;
@@ -21,7 +21,7 @@ bool isPrime(uint32_t n){
 
 int main(void){
 	uint32_t i, j;
-	
+
 	for(i = 3, j = 1; j != 10001; i += 2)
 		if(isPrime(i))
 			j++;

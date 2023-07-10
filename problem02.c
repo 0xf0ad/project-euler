@@ -25,4 +25,3 @@ int main(void){
 	printf("their sum is %zu\n", sum);
 	return EXIT_SUCCESS;
 }
-

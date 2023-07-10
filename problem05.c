@@ -9,7 +9,7 @@ int main(void){
 	uint32_t i = 2;
 	bool found = true;
 
-	for(;; i++){
+	while(true){
 		for(uint32_t j = target; j != 1; j--)
 			if(i % j){
 				found = false;
@@ -19,8 +19,9 @@ int main(void){
 		if(found)
 			break;
 		found = true;
+		i++;
 	}
+
 	printf("the smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is %u\n", i);
 	return EXIT_SUCCESS;
 }
-

@@ -5,28 +5,28 @@
 #include <math.h>
 
 bool isPalindrome(uint32_t num){
-    if(num == 0)            return true;
+	if(num == 0)            return true;
 
-    uint8_t digits[10];
-    uint32_t tmpNum = num;
-    uint8_t digitNumber = 0;
+	uint8_t digits[10];
+	uint32_t tmpNum = num;
+	uint8_t digitNumber = 0;
 
-    while(tmpNum){
-        digits[digitNumber] = tmpNum % 10;
-        tmpNum /= 10;
-        digitNumber++;
-    }
+	while(tmpNum){
+		digits[digitNumber] = tmpNum % 10;
+		tmpNum /= 10;
+		digitNumber++;
+	}
 
-    if(digitNumber == 1)     return true;
+	if(digitNumber == 1)     return true;
 
-    uint8_t numIters = digitNumber >> 1;
-    digitNumber--;
+	uint8_t numIters = digitNumber >> 1;
+	digitNumber--;
 
-    for(uint8_t i = 0; i != numIters; i++)
-        if(digits[i] != digits[digitNumber-i])
-            return false;
+	for(uint8_t i = 0; i != numIters; i++)
+		if(digits[i] != digits[digitNumber-i])
+			return false;
 
-    return true;
+	return true;
 }
 
 int main(void){
@@ -56,4 +56,3 @@ int main(void){
 	printf("the number is %u = %u x %u\n", number, i, j);
 	return EXIT_SUCCESS;
 }
-
