@@ -10,13 +10,10 @@ uint64_t d(uint64_t n){
 	for(uint32_t i = 2; i != nsqrt; i++){
 		if(!(n % i)){
 			sum += i;
-			//printf("%u\n%zu\n", i, n/i);
-			if( i*i != n){
+			if( i*i != n)
 				sum += n / i;
-			}
 		}
 	}
-	//printf("sum : %u\n\n", sum);
 
 	return sum;
 }
