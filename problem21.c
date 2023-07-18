@@ -6,7 +6,7 @@
 uint64_t d(uint64_t n){
 	uint32_t nsqrt = sqrt(n) + 1;
 	uint64_t sum = 1;
-	
+
 	for(uint32_t i = 2; i != nsqrt; i++){
 		if(!(n % i)){
 			sum += i;

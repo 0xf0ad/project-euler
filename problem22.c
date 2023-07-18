@@ -23,11 +23,10 @@ typedef struct{
 	uint32_t score;
 } data;
 
-
 void swap(data* a, data* b){
-    data tmp = *a;
-    *a = *b;
-    *b = tmp;
+	data tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 void sort(data* arr, uint32_t len){
@@ -36,22 +35,17 @@ void sort(data* arr, uint32_t len){
 	if (len <= 1)
 	return;
 
-	// swap a randomly selected value to the last node
 	swap(arr+((uint32_t)rand() % len), arr+len-1);
 
-	// reset the pivot index to zero, then scan
 	for (i = 0; i != len-1; i++)
 		if (strcmp(arr[i].name, arr[len-1].name) < 0)
 			swap(arr+i, arr+pvt++);
 
-	// move the pivot value into its place
 	swap(arr+pvt, arr+len-1);
 
-	// and invoke on the subsequences. does NOT include the pivot-slot
 	sort(arr, pvt++);
 	sort(arr + pvt, len - pvt);
 }
-
 
 int main(int argc, char** argv){
 

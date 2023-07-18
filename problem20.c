@@ -12,7 +12,7 @@ const char* factorial(uint64_t n){
 	// aproximation for the log10(n!)
 	uint32_t strlen = (n + 0.5f) * log10f(n) - n * log10_e + log10_2piover2;
 	uint32_t result[strlen + 1];
-	
+
 	result[strlen] = 1;
 	for(uint32_t i = strlen-1; i != -1; i--)
 		result[i] = 0;
@@ -49,7 +49,7 @@ int main(void){
 	const char* res = factorial(num);
 	uint32_t reslen = strlen(res) + 1;
 	uint64_t sum = 0;
-	
+
 	for(uint32_t i = 0; i != reslen; i++)
 		sum += res[i];
 

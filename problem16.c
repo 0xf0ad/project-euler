@@ -5,7 +5,7 @@
 
 void poweroftwo(char* number, uint32_t strlen, uint32_t power){
 	for(uint32_t i = 0; i != power; i++){
-		
+
 		uint32_t carry = 0;
 		for(uint32_t j = strlen-1; j != -1; j--){
 			number[j] = (number[j] << 1) + carry - '0';

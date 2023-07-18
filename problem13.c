@@ -111,13 +111,13 @@ int main(void){
 	uint16_t carry = 0;
 	char result[row_size + 3];
 	result [row_size + 2] = '\0';
-	
+
 	for(int32_t i = row_size-1; i >= 0; i--){
 		sum = carry;
 
 		for(uint16_t j = 0; j != colum_size; j++)
 			sum += number[j * row_size + i];
-		
+
 		sum -= '0' * colum_size;
 		result[i+2] = sum % 10 + '0';
 		carry = sum / 10;

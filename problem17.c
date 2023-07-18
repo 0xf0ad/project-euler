@@ -19,7 +19,7 @@ uint32_t num_len_in_lettres(const char* number){
 
 	if(ones)
 		len += strlen(digits[ones]);
-	
+
 	if(tens == 1)
 		len = strlen(over_ten[ones]);
 	else if(tens > 1)
@@ -30,20 +30,20 @@ uint32_t num_len_in_lettres(const char* number){
 		len += strlen(digits[hundreds]) + strlen(hundred) + strlen("and");
 	if(thousands)
 		len += strlen(digits[thousands]) + strlen(thousand);
-	
+
 	if(!len)
 		len = strlen(digits[0]);
-	
+
 	return len;
 }
 
 int main(void){
 	char number[5];
 	uint32_t sum = 0;
-	
+
 	for(uint8_t i = 0; i != 5; i++)
 		number[i] = '0';
-	
+
 	for(uint32_t i = 0; i != 1000; i++){
 		uint32_t j = 4;
 		if(number[j] == '9'){

@@ -12,7 +12,7 @@ int main(void){
 
 	for(uint16_t i = 0; i != num_mounths+ 1; i++){
 		crnt_day = (crnt_day + days_on_month[i % 12]) % 7;
-		
+
 		if((i % 12) == 1)
 			if(!(i / 12) % 4)
 				crnt_day++;

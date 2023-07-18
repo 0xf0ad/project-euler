@@ -10,7 +10,7 @@ int main(void){
 	for(uint32_t m = n; m != max_n; m++){
 		uint64_t i = m;
 		uint64_t crnt_chain = 0;
-		
+
 		while(i > 1){
 			if(i % 2)
 				i = 3 * i + 1;
@@ -18,7 +18,7 @@ int main(void){
 				i /= 2;
 			crnt_chain++;
 		}
-		
+
 		if(crnt_chain > max_chain_len){
 			max_chain_len = crnt_chain;
 			n = m;

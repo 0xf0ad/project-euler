@@ -5,7 +5,7 @@
 
 uint64_t comb(uint64_t n){
 	uint64_t prev_res = 1;
-	
+
 	for(uint64_t i = 1; i != n + 1; i++)
 		prev_res = prev_res * (4 * i - 2) / i;
 
@@ -30,7 +30,7 @@ int main(void){
 	// triangle so we will use combinations to get a single element from it
 	// EDIT : I relise that those terms can be cancelled becaus they are the
 	// same so dont bother computting them anyway
-	
+
 	// using the probalistic combination to get the grid_size-th element
 	// from the path_len-th row of the alkhayam triangle
 	uint64_t num_paths = comb(grid_size);
