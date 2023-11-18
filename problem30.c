@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define FIFTHPOWER(x) ( (x) * (x) * (x) * (x) * (x))
+#define FIFTHPOWER(x) ((x) * (x) * (x) * (x) * (x))
 
 int main(void){
 
@@ -25,13 +25,13 @@ int main(void){
 				break;
 			}
 		}
+
 		if(!overflowed)
 			if(sum == i)
-				//printf("lmao I fonund %u\n", i);
 				totalsum += sum;
 	}
 
 	printf("sum of all the numbers that can be written as the sum of fifth powers of their digits is %u\n", totalsum);
-	
+
 	return EXIT_SUCCESS;
 }

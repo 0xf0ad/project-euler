@@ -7,7 +7,7 @@ void poweroftwo(char* number, uint32_t strlen, uint32_t power){
 	for(uint32_t i = 0; i != power; i++){
 
 		uint32_t carry = 0;
-		for(uint32_t j = strlen-1; j != -1; j--){
+		for(uint32_t j = strlen - 1; j != -1; j--){
 			number[j] = (number[j] << 1) + carry - '0';
 
 			if(number[j] > '9'){
@@ -19,7 +19,6 @@ void poweroftwo(char* number, uint32_t strlen, uint32_t power){
 		}
 	}
 }
-
 
 int main(void){
 	uint16_t powerof = 1000;
@@ -40,4 +39,3 @@ int main(void){
 
 	return EXIT_SUCCESS;
 }
-

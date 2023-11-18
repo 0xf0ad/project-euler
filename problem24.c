@@ -32,4 +32,3 @@ int main(void){
 	printf("the %uth lexicographic permutation of the digits is %s\n", maxiters, result);
 	return EXIT_SUCCESS;
 }
-

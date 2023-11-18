@@ -30,9 +30,10 @@ int main(void){
 	const char* adjnum;
 	uint16_t numdigits = strlen(number);
 	uint64_t maxprod = 0, maxindex  = 0;
-	uint64_t prod = 1;
+	uint64_t prod;
 
-	for(uint16_t i = 0; i != numdigits - adjnumdigits + 1; i++, prod = 1){
+	for(uint16_t i = 0; i != (numdigits - adjnumdigits + 1); i++){
+		prod = 1;
 		adjnum = number + i;
 
 		for(uint16_t j = 0; j != adjnumdigits; j++)
@@ -46,7 +47,7 @@ int main(void){
 
 	const char* temp = strndup((number + maxindex), adjnumdigits);
 
-	printf("the %d adjacent digits in the %d-digit number that have the greatest product are\n%s\n", adjnumdigits, numdigits, temp);
+	printf("the %d adjacent digits in the %d-digit number that have the greatest product are %s\n", adjnumdigits, numdigits, temp);
 	printf("their product is %zu\n", maxprod);
 
 	free((void*) temp);

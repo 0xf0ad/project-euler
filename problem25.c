@@ -31,4 +31,3 @@ int main(void){
 	printf("the index of the first term in the Fibonacci sequence to contain %u digits is : %u\n", max_digits, index);
 	return EXIT_SUCCESS;
 }
-

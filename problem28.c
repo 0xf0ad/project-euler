@@ -21,6 +21,4 @@ int main(void){
 	printf("the sum of the numbers on the diagonals in a %u by %u spiral formed is %u\n", target, target, sum);
 
 	return EXIT_SUCCESS;
-
 }
-

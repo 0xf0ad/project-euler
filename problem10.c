@@ -6,7 +6,7 @@
 
 bool isPrime(uint32_t n){
 	if(n < 4)
-		return n > 1;
+		return (n > 1);
 	if(!((n % 2) && (n % 3)))
 		return false;
 
@@ -30,4 +30,3 @@ int main(void){
 	printf("the sum of all the primes below %u is %zu\n", number, sum);
 	return EXIT_SUCCESS;
 }
-

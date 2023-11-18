@@ -3,7 +3,9 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
-#include <sys/types.h>
+
+// (note from future) THA FUCK I WAS COOKING ????!???!!!?!?
+
 
 // adds two digits arrays
 // both digits arrays have to be with the same length
@@ -50,7 +52,5 @@ int main(void){
 
 	printf("the first %u digits of thseries up to but not including %u are %s\n", BUFSIZE, target, sum);
 
-
 	return EXIT_SUCCESS;
 }
-

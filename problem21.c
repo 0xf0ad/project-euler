@@ -31,4 +31,3 @@ int main(void){
 	printf("sum : %zu\n", sum);
 	return EXIT_SUCCESS;
 }
-

@@ -10,7 +10,7 @@ int main(void){
 	uint16_t num_mounths = 100 * 12;
 	uint16_t sundays_on_fell_month = 0;
 
-	for(uint16_t i = 0; i != num_mounths+ 1; i++){
+	for(uint16_t i = 0; i != num_mounths + 1; i++){
 		crnt_day = (crnt_day + days_on_month[i % 12]) % 7;
 
 		if((i % 12) == 1)
@@ -25,4 +25,3 @@ int main(void){
 
 	return EXIT_SUCCESS;
 }
-

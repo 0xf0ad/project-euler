@@ -33,7 +33,6 @@ int main(void){
 	// this is the largest polidrome number which can be a product of two 3-digit numbers
 	uint32_t number = 997799;
 	uint32_t i, j;
-	bool found = false;
 
 	while(number > 9999){
 		if(isPalindrome(number)){
@@ -41,17 +40,15 @@ int main(void){
 				if(!(number % i)){
 					j = number / i;
 					if((j > 99) && (j < 1000)){
-						found = true;
-						break;
+						goto getout;
 					}
 				}
-			}
-			if(found){
-				break;
 			}
 		}
 		number--;
 	}
+
+	getout:
 
 	printf("the number is %u = %u x %u\n", number, i, j);
 	return EXIT_SUCCESS;
