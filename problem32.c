@@ -44,10 +44,10 @@ bool prodIsPandigital(uint32_t a, uint32_t b){
 				return false;
 			// else set the array element and continue
 			digits[digit] = true;
-			num /= 10;
+			num /= 10;	
 		}
 	}
-
+	
 	for(uint8_t i = 1; i != sizeof(digits); i++)
 		if(!digits[i])
 			return false;
@@ -59,6 +59,7 @@ void insertifnotthere(uint32_t val, uint32_t* arr, size_t size){
 		if(arr[i] == val)
 			return;
 		if(!arr[i]){
+			printf("sf l9itha %u\n", i);
 			arr[i] = val;
 			return;
 		}
@@ -74,29 +75,31 @@ uint32_t arrsum(uint32_t* arr, uint32_t size){
 
 int main(void){
 
-	uint32_t i = 1, j;
+	uint32_t i, j;
+	bool done = false;
 	uint32_t results[16] = {0};
+	i = 1;
 	while(i){
 		if(isPandigital(i)){
 			j = 1;
 			while(j < (10000000 / i)){
 				if(prodIsPandigital(i, j)){
 					if(i > j)
-						goto getout;
+						done = true;
 					else
 						insertifnotthere(i * j, results, sizeof(results) / sizeof(results[0]));
 				}
 				j++;
 			}
+			if(done)
+				break;
 		}
 		i++;
 	}
 
-	getout:
-		; // ik it doesntmake sense but clang goes nuts without it
-	
 	uint32_t sum = arrsum(results, sizeof(results) / sizeof(results[0]));
 	printf("the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital is %u\n", sum);
 
 	return EXIT_SUCCESS;
 }
+

@@ -123,10 +123,11 @@ int main(void){
 		carry = sum / 10;
 	}
 
-	result[1] =  carry     % 10 + '0';
+	result[1] = carry % 10 + '0';
 	result[0] = (carry/10) % 10 + '0';
 
 	printf("the sum of the one-hundred 50-digit numbers is %s\nthe first 10-digits of the sum are %.10s\n", result, result);
 
 	return EXIT_SUCCESS;
 }
+

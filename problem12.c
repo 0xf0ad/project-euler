@@ -14,7 +14,7 @@ int main(void){
 		last_added++;
 		number = prev_number + last_added;
 		prev_number = number;
-
+		
 		// add one because every number is divizable by one and itself
 		// excludding one because it is itself a one
 		num_divisor = 0;
@@ -24,7 +24,7 @@ int main(void){
 		for(uint32_t i = 1; i != num_sqrt; i++)
 			if(!(number % i))
 				num_divisor++;
-
+		
 		num_divisor *= 2;
 		num_divisor -= (num_sqrt * num_sqrt == number);
 
@@ -36,3 +36,4 @@ int main(void){
 
 	return EXIT_SUCCESS;
 }
+

@@ -30,7 +30,7 @@ uint32_t divmod10(uint32_t num, char* str, size_t size){
 */
 
 int main(void){
-	// dont worry about this
+	// dont worry abiut this
 	/*
 	char buf[BUFSIZE];
 
@@ -90,7 +90,7 @@ int main(void){
 			strikeowner = i;
 		}
 	}
-
+	
 	printf("biggest strike of %u by the number %u\n", strike, strikeowner);
 	return EXIT_SUCCESS;
 }

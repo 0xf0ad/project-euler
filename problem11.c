@@ -26,7 +26,7 @@ const char* number = "08""02""22""97""38""15""00""40""00""75""04""05""07""78""52
 void get_max_prod(const char* number, uint16_t begin, uint16_t step, uint8_t numbers_online, uint64_t* prev_max){
 	uint64_t prod = 1;
 
-	for(uint32_t j = (begin << 1); j != (numbers_online * step + begin) << 1; j += (step << 1))
+	for(uint32_t j = begin * 2; j != (numbers_online * step + begin) * 2; j += (step) * 2)
 		prod *= (number[j] - '0') * 10 + (number[j+1] - '0');
 
 	if(*prev_max < prod)

@@ -12,7 +12,7 @@ bool isabundant(uint32_t num){
 	for(uint32_t i = 2; i != sqrtnum; i++)
 		if(!(num % i))
 			divsum += i + num/i;
-
+	
 	if(sqrtnum * sqrtnum == num)
 		divsum += sqrtnum;
 
@@ -39,3 +39,4 @@ int main(void){
 	printf("sum = %zu\n", sum);
 	return EXIT_SUCCESS;
 }
+
